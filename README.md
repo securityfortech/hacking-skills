@@ -82,6 +82,8 @@ skills/
 |-------|--------|
 | [github-actions-script-injection](skills/cicd/github-actions-script-injection/SKILL.md) | blog_post |
 | [github-actions-cache-poisoning](skills/cicd/github-actions-cache-poisoning/SKILL.md) | blog_post |
+| [pwn-request](skills/cicd/pwn-request/SKILL.md) | blog_post |
+| [cicd-bot-command-injection](skills/cicd/cicd-bot-command-injection/SKILL.md) | blog_post |
 
 ## Adding a New Skill
 

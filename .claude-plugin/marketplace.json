@@ -102,7 +102,9 @@
       "strict": false,
       "skills": [
         "./skills/cicd/github-actions-script-injection",
-        "./skills/cicd/github-actions-cache-poisoning"
+        "./skills/cicd/github-actions-cache-poisoning",
+        "./skills/cicd/pwn-request",
+        "./skills/cicd/cicd-bot-command-injection"
       ]
     }
   ]

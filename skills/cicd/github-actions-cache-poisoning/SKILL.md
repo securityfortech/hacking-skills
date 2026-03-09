@@ -6,7 +6,9 @@ description: >
   downstream workflow. Trigger on: "cache poisoning", "actions/cache", "actions/setup-node",
   "node_modules cache", "GitHub Actions cache", "pnpm cache", "LRU eviction", "10GB limit",
   "Cacheract", "poisoned cache", "workflow cache attack", supply chain via CI cache,
-  "ng-renovate", "cache stuffing", scheduled workflow cache restore.
+  "ng-renovate", "cache stuffing", scheduled workflow cache restore, shared cache key,
+  "hashFiles package.json", cross-workflow cache, PR workflow release workflow same key,
+  "npm install prefer-offline", Cacheract, Gato-X, supply chain npm token.
 license: MIT
 compatibility: Designed for Claude Code. Requires read access to target repository's workflow files.
 metadata:
@@ -29,6 +31,7 @@ legitimate cache entries and replace them with poisoned ones within a single wor
 
 ## Key Signals
 
+- **Shared cache key across PR and release workflows**: `key: ${{ runner.os }}-node-${{ hashFiles('**/package.json') }}` used identically in both a `pull_request`/`pull_request_target` workflow AND a release/publish workflow
 - Repository uses `actions/cache`, `actions/setup-node`, `actions/setup-python` (or similar) with caching enabled
 - A scheduled or bot-triggered workflow runs with elevated secrets and restores a shared cache
 - Cache keys are predictable or controllable (e.g., based on `pnpm-lock.yaml` hash, OS, Node version)
