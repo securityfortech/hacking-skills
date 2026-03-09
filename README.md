@@ -84,6 +84,7 @@ skills/
 | [github-actions-cache-poisoning](skills/cicd/github-actions-cache-poisoning/SKILL.md) | blog_post |
 | [pwn-request](skills/cicd/pwn-request/SKILL.md) | blog_post |
 | [cicd-bot-command-injection](skills/cicd/cicd-bot-command-injection/SKILL.md) | blog_post |
+| [self-hosted-runner-poisoning](skills/cicd/self-hosted-runner-poisoning/SKILL.md) | blog_post |
 
 ## Adding a New Skill
 
