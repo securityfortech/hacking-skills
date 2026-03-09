@@ -77,6 +77,12 @@ skills/
 |-------|------|
 | [business-logic-flaws](skills/web/business-logic-flaws/SKILL.md) | BUSL-01–06 |
 
+### CI/CD
+| Skill | Source |
+|-------|--------|
+| [github-actions-script-injection](skills/cicd/github-actions-script-injection/SKILL.md) | blog_post |
+| [github-actions-cache-poisoning](skills/cicd/github-actions-cache-poisoning/SKILL.md) | blog_post |
+
 ## Adding a New Skill
 
 ### From source material (recommended)

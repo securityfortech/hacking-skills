@@ -94,6 +94,16 @@
       "skills": [
         "./skills/web/business-logic-flaws"
       ]
+    },
+    {
+      "name": "cicd",
+      "description": "CI/CD and supply chain attack skills targeting GitHub Actions and pipeline infrastructure.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/cicd/github-actions-script-injection",
+        "./skills/cicd/github-actions-cache-poisoning"
+      ]
     }
   ]
 }
