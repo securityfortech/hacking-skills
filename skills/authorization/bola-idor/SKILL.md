@@ -12,6 +12,7 @@ compatibility: Designed for Claude Code. Burp Suite (Autorize extension) or curl
 metadata:
   category: authorization
   version: "0.2"
+  source: https://owasp.org/www-project-web-security-testing-guide/stable/
   wstg: WSTG-ATHZ-04
 ---
 

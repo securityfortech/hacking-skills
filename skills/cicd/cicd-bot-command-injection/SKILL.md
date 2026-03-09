@@ -13,6 +13,7 @@ compatibility: Designed for Claude Code. Requires read access to .github/workflo
 metadata:
   category: cicd
   version: "0.1"
+  source: https://www.landh.tech/blog/20251003-36m-installs/
   source_types: blog_post
 ---
 

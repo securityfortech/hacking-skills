@@ -7,6 +7,7 @@ compatibility: Designed for Claude Code. Requires Burp Suite with HTTP Request S
 metadata:
   category: web
   version: "0.1"
+  source: https://owasp.org/www-project-web-security-testing-guide/stable/
   wstg: WSTG-INPV-15
 ---
 

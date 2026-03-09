@@ -73,8 +73,10 @@ description: >
 license: MIT
 compatibility: Designed for Claude Code. <list any required tools e.g. Burp Suite, nmap, ffuf>
 metadata:
-  category: <api | web | network | mobile | cloud | binary | crypto>
+  category: <api | web | network | mobile | cloud | binary | crypto | cicd>
   version: "0.1"
+  source: <URL or reference of the source material>
+  source_types: <bug_report | walkthrough | pentest_report | blog_post | ezine | book>
 ---
 
 # <Technique Full Name>

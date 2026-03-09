@@ -14,6 +14,7 @@ compatibility: Designed for Claude Code. Requires read access to target reposito
 metadata:
   category: cicd
   version: "0.1"
+  source: https://adnanthekhan.com/posts/angular-compromise-through-dev-infra/
   source_types: blog_post
 ---
 

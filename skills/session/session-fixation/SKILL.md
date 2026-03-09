@@ -11,6 +11,7 @@ compatibility: Designed for Claude Code. Requires Burp Suite or OWASP ZAP.
 metadata:
   category: web
   version: "0.1"
+  source: https://owasp.org/www-project-web-security-testing-guide/stable/
   wstg: WSTG-SESS-01, WSTG-SESS-03, WSTG-SESS-04
 ---
 

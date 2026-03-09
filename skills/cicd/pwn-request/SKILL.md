@@ -13,6 +13,7 @@ compatibility: Designed for Claude Code. Requires access to target .github/workf
 metadata:
   category: cicd
   version: "0.1"
+  source: https://www.landh.tech/blog/20251003-36m-installs/
   source_types: blog_post
 ---
 
