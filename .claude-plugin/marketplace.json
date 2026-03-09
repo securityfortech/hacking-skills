@@ -83,7 +83,8 @@
         "./skills/client-side/dom-xss",
         "./skills/client-side/csrf",
         "./skills/client-side/cors-misconfig",
-        "./skills/client-side/clickjacking"
+        "./skills/client-side/clickjacking",
+        "./skills/client-side/cspt"
       ]
     },
     {

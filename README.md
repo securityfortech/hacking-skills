@@ -70,6 +70,7 @@ skills/
 | [clickjacking](skills/client-side/clickjacking/SKILL.md) | CLNT-09 |
 | [cors-misconfig](skills/client-side/cors-misconfig/SKILL.md) | CLNT-07 |
 | [csrf](skills/client-side/csrf/SKILL.md) | SESS-05 |
+| [cspt](skills/client-side/cspt/SKILL.md) | blog_post |
 | [dom-xss](skills/client-side/dom-xss/SKILL.md) | CLNT-01 |
 
 ### Web
