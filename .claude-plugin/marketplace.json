@@ -1,0 +1,99 @@
+{
+  "name": "hacking-skills",
+  "owner": {
+    "name": "hacking-skills contributors"
+  },
+  "metadata": {
+    "description": "Claude Code skills for finding bugs and vulnerabilities — bug bounty, pentest, CTF, code review.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "meta-skills",
+      "description": "Skills for building and maintaining the skill library itself.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/distill-to-skill"
+      ]
+    },
+    {
+      "name": "web-recon",
+      "description": "Information gathering and fingerprinting skills.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/web-recon/web-fingerprinting"
+      ]
+    },
+    {
+      "name": "authentication",
+      "description": "Authentication bypass and credential attack skills.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/authentication/auth-bypass",
+        "./skills/authentication/default-credentials",
+        "./skills/authentication/password-reset-flaws"
+      ]
+    },
+    {
+      "name": "authorization",
+      "description": "Authorization bypass, privilege escalation, and object reference skills.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/authorization/authz-bypass",
+        "./skills/authorization/path-traversal",
+        "./skills/authorization/bola-idor"
+      ]
+    },
+    {
+      "name": "session",
+      "description": "Session management attack skills.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/session/cookie-attacks",
+        "./skills/session/session-fixation"
+      ]
+    },
+    {
+      "name": "injection",
+      "description": "Injection vulnerability skills: SQLi, XSS, SSRF, SSTI, XXE, command injection, smuggling.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/injection/sql-injection",
+        "./skills/injection/xss-reflected",
+        "./skills/injection/xss-stored",
+        "./skills/injection/cmd-injection",
+        "./skills/injection/ssrf",
+        "./skills/injection/ssti",
+        "./skills/injection/xxe",
+        "./skills/injection/http-request-smuggling"
+      ]
+    },
+    {
+      "name": "client-side",
+      "description": "Client-side attack skills: DOM XSS, CSRF, CORS, clickjacking.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/client-side/dom-xss",
+        "./skills/client-side/csrf",
+        "./skills/client-side/cors-misconfig",
+        "./skills/client-side/clickjacking"
+      ]
+    },
+    {
+      "name": "web",
+      "description": "General web application vulnerability skills.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/web/business-logic-flaws"
+      ]
+    }
+  ]
+}
