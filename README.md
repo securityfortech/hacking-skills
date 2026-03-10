@@ -19,6 +19,14 @@ skills/
     client-side/
     web-recon/
     web/
+  owasp-mastg/                  ← systematic framework: OWASP Mobile Application Security Testing Guide
+    storage/
+    crypto/
+    auth/
+    network/
+    platform/
+    code/
+    resilience/
   research/                     ← tactical: blog posts, CVEs, bug bounty writeups
     cicd/
     api-hacking/
@@ -30,6 +38,7 @@ skills/
 | Collection | Description |
 |------------|-------------|
 | `owasp-wstg` | Systematic web testing methodology — install for complete coverage mindset |
+| `owasp-mastg` | Systematic mobile testing methodology (Android + iOS) — install for mobile coverage |
 | `research` | Cutting-edge tactical techniques — install for specific attack patterns |
 | `meta-skills` | Skill generation tooling |
 
@@ -98,6 +107,20 @@ skills/
 
 ---
 
+### `owasp-mastg` — [OWASP Mobile Application Security Testing Guide](https://mas.owasp.org/MASTG/)
+
+| Skill | MASVS | Source |
+|-------|-------|--------|
+| [mobile-insecure-storage](skills/owasp-mastg/storage/mobile-insecure-storage/SKILL.md) | MASVS-STORAGE-1, 2 | [MASTG](https://mas.owasp.org/MASTG/) |
+| [mobile-weak-crypto](skills/owasp-mastg/crypto/mobile-weak-crypto/SKILL.md) | MASVS-CRYPTO-1, 2 | [MASTG](https://mas.owasp.org/MASTG/) |
+| [mobile-auth-bypass](skills/owasp-mastg/auth/mobile-auth-bypass/SKILL.md) | MASVS-AUTH-1, 2, 3 | [MASTG](https://mas.owasp.org/MASTG/) |
+| [mobile-network-security](skills/owasp-mastg/network/mobile-network-security/SKILL.md) | MASVS-NETWORK-1, 2 | [MASTG](https://mas.owasp.org/MASTG/) |
+| [mobile-platform-interaction](skills/owasp-mastg/platform/mobile-platform-interaction/SKILL.md) | MASVS-PLATFORM-1, 2, 3 | [MASTG](https://mas.owasp.org/MASTG/) |
+| [mobile-code-quality](skills/owasp-mastg/code/mobile-code-quality/SKILL.md) | MASVS-CODE-1, 2, 3, 4 | [MASTG](https://mas.owasp.org/MASTG/) |
+| [mobile-resilience](skills/owasp-mastg/resilience/mobile-resilience/SKILL.md) | MASVS-RESILIENCE-1, 2, 3, 4 | [MASTG](https://mas.owasp.org/MASTG/) |
+
+---
+
 ### `research` — Blog Posts, CVEs, Bug Bounty Writeups
 
 #### CI/CD
@@ -128,7 +151,7 @@ Paste any security content and run `/distill-to-skill`. Claude extracts the tech
 outputs a ready-to-save `SKILL.md`, and tells you which collection to add it to.
 
 ### Manually
-1. Choose the right bucket: `owasp-wstg/` for framework-derived, `research/` for one-shot research
+1. Choose the right bucket: `owasp-wstg/` or `owasp-mastg/` for framework-derived, `research/` for one-shot research
 2. Create `skills/<bucket>/<category>/<technique>/SKILL.md`
 3. Ensure `name` matches the directory name exactly
 4. Add the path to `.claude-plugin/marketplace.json`

@@ -48,6 +48,21 @@
       ]
     },
     {
+      "name": "owasp-mastg",
+      "description": "Mobile application security testing skills distilled from the OWASP Mobile Application Security Testing Guide (MASTG). Covers Android and iOS: insecure storage, weak cryptography, authentication bypass, network security, platform interaction, code quality, and resilience against reverse engineering.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/owasp-mastg/storage/mobile-insecure-storage",
+        "./skills/owasp-mastg/crypto/mobile-weak-crypto",
+        "./skills/owasp-mastg/auth/mobile-auth-bypass",
+        "./skills/owasp-mastg/network/mobile-network-security",
+        "./skills/owasp-mastg/platform/mobile-platform-interaction",
+        "./skills/owasp-mastg/code/mobile-code-quality",
+        "./skills/owasp-mastg/resilience/mobile-resilience"
+      ]
+    },
+    {
       "name": "research",
       "description": "Tactical offensive security skills distilled from security research, blog posts, CVEs, and bug bounty writeups. Covers CI/CD attacks, API abuse, and cutting-edge client-side techniques.",
       "source": "./",
