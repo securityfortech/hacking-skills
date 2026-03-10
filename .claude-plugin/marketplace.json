@@ -38,6 +38,15 @@
       ]
     },
     {
+      "name": "api-hacking",
+      "description": "Vulnerability hunting skills for APIs — GraphQL, REST, authorization flaws.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/api-hacking/graphql-idor-via-introspection-leak"
+      ]
+    },
+    {
       "name": "authorization",
       "description": "Authorization bypass, privilege escalation, and object reference skills.",
       "source": "./",

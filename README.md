@@ -39,6 +39,11 @@ skills/
 | [default-credentials](skills/authentication/default-credentials/SKILL.md) | ATHN-02, 07 |
 | [password-reset-flaws](skills/authentication/password-reset-flaws/SKILL.md) | ATHN-07, 09 |
 
+### API Hacking
+| Skill | Source |
+|-------|--------|
+| [graphql-idor-via-introspection-leak](skills/api-hacking/graphql-idor-via-introspection-leak/SKILL.md) | manual |
+
 ### Authorization
 | Skill | WSTG |
 |-------|------|
