@@ -4,101 +4,131 @@ Claude Code skills for finding bugs and vulnerabilities — bug bounty, pentest,
 
 ## Structure
 
-Categories are plain folders. Each technique is its own skill with its own `SKILL.md`.
+Skills are organized by **knowledge source**, not just vulnerability category.
 
 ```
 .claude-plugin/
-  marketplace.json              ← skill collections for distribution
+  marketplace.json              ← plugin collections for distribution
 skills/
-  distill-to-skill/             ← meta-skill: generates new skills from any source
-    SKILL.md
-  <category>/                   ← plain folder, no SKILL.md
-    <technique>/
-      SKILL.md                  ← one skill per technique
-      scripts/                  ← optional: helper scripts
-      references/               ← optional: supplementary docs
-      assets/                   ← optional: payloads, templates
+  distill-to-skill/             ← meta-skill: generate new skills from any source
+  owasp-wstg/                   ← systematic framework: OWASP Web Security Testing Guide
+    authentication/
+    authorization/
+    session/
+    injection/
+    client-side/
+    web-recon/
+    web/
+  research/                     ← tactical: blog posts, CVEs, bug bounty writeups
+    cicd/
+    api-hacking/
+    client-side/
 ```
+
+## Plugin Collections
+
+| Collection | Description |
+|------------|-------------|
+| `owasp-wstg` | Systematic web testing methodology — install for complete coverage mindset |
+| `research` | Cutting-edge tactical techniques — install for specific attack patterns |
+| `meta-skills` | Skill generation tooling |
+
+---
 
 ## Skills
 
 ### Meta
 | Skill | Description |
 |-------|-------------|
-| [distill-to-skill](skills/distill-to-skill/SKILL.md) | Extract reusable offensive knowledge from any source (bug report, blog, book, CTF, pentest report, ezine) → SKILL.md |
+| [distill-to-skill](skills/distill-to-skill/SKILL.md) | Extract reusable offensive knowledge from any source → SKILL.md |
 
-### Web Recon
+---
+
+### `owasp-wstg` — OWASP Web Security Testing Guide
+
+#### Web Recon
 | Skill | WSTG |
 |-------|------|
-| [web-fingerprinting](skills/web-recon/web-fingerprinting/SKILL.md) | INFO-01–10 |
+| [web-fingerprinting](skills/owasp-wstg/web-recon/web-fingerprinting/SKILL.md) | INFO-01–10 |
 
-### Authentication
+#### Authentication
 | Skill | WSTG |
 |-------|------|
-| [auth-bypass](skills/authentication/auth-bypass/SKILL.md) | ATHN-01, 04–06 |
-| [default-credentials](skills/authentication/default-credentials/SKILL.md) | ATHN-02, 07 |
-| [password-reset-flaws](skills/authentication/password-reset-flaws/SKILL.md) | ATHN-07, 09 |
+| [auth-bypass](skills/owasp-wstg/authentication/auth-bypass/SKILL.md) | ATHN-01, 04–06 |
+| [default-credentials](skills/owasp-wstg/authentication/default-credentials/SKILL.md) | ATHN-02, 07 |
+| [password-reset-flaws](skills/owasp-wstg/authentication/password-reset-flaws/SKILL.md) | ATHN-07, 09 |
 
-### API Hacking
+#### Authorization
+| Skill | WSTG |
+|-------|------|
+| [authz-bypass](skills/owasp-wstg/authorization/authz-bypass/SKILL.md) | ATHZ-02, 04 |
+| [bola-idor](skills/owasp-wstg/authorization/bola-idor/SKILL.md) | ATHZ-04 |
+| [path-traversal](skills/owasp-wstg/authorization/path-traversal/SKILL.md) | ATHZ-01 |
+
+#### Session
+| Skill | WSTG |
+|-------|------|
+| [cookie-attacks](skills/owasp-wstg/session/cookie-attacks/SKILL.md) | SESS-02, 06 |
+| [session-fixation](skills/owasp-wstg/session/session-fixation/SKILL.md) | SESS-01, 03, 04 |
+
+#### Injection
+| Skill | WSTG |
+|-------|------|
+| [sql-injection](skills/owasp-wstg/injection/sql-injection/SKILL.md) | INPV-05 |
+| [xss-reflected](skills/owasp-wstg/injection/xss-reflected/SKILL.md) | INPV-01 |
+| [xss-stored](skills/owasp-wstg/injection/xss-stored/SKILL.md) | INPV-02 |
+| [cmd-injection](skills/owasp-wstg/injection/cmd-injection/SKILL.md) | INPV-12 |
+| [ssrf](skills/owasp-wstg/injection/ssrf/SKILL.md) | INPV-19 |
+| [ssti](skills/owasp-wstg/injection/ssti/SKILL.md) | INPV-18 |
+| [xxe](skills/owasp-wstg/injection/xxe/SKILL.md) | INPV-07 |
+| [http-request-smuggling](skills/owasp-wstg/injection/http-request-smuggling/SKILL.md) | INPV-15 |
+
+#### Client-Side
+| Skill | WSTG |
+|-------|------|
+| [dom-xss](skills/owasp-wstg/client-side/dom-xss/SKILL.md) | CLNT-01 |
+| [csrf](skills/owasp-wstg/client-side/csrf/SKILL.md) | SESS-05 |
+| [cors-misconfig](skills/owasp-wstg/client-side/cors-misconfig/SKILL.md) | CLNT-07 |
+| [clickjacking](skills/owasp-wstg/client-side/clickjacking/SKILL.md) | CLNT-09 |
+
+#### Web
+| Skill | WSTG |
+|-------|------|
+| [business-logic-flaws](skills/owasp-wstg/web/business-logic-flaws/SKILL.md) | BUSL-01–06 |
+
+---
+
+### `research` — Blog Posts, CVEs, Bug Bounty Writeups
+
+#### CI/CD
 | Skill | Source |
 |-------|--------|
-| [graphql-idor-via-introspection-leak](skills/api-hacking/graphql-idor-via-introspection-leak/SKILL.md) | manual |
+| [github-actions-script-injection](skills/research/cicd/github-actions-script-injection/SKILL.md) | [adnanthekhan.com](https://adnanthekhan.com/posts/angular-compromise-through-dev-infra/) |
+| [github-actions-cache-poisoning](skills/research/cicd/github-actions-cache-poisoning/SKILL.md) | [adnanthekhan.com](https://adnanthekhan.com/posts/angular-compromise-through-dev-infra/) |
+| [pwn-request](skills/research/cicd/pwn-request/SKILL.md) | [landh.tech](https://www.landh.tech/blog/20251003-36m-installs/) |
+| [cicd-bot-command-injection](skills/research/cicd/cicd-bot-command-injection/SKILL.md) | [landh.tech](https://www.landh.tech/blog/20251003-36m-installs/) |
+| [self-hosted-runner-poisoning](skills/research/cicd/self-hosted-runner-poisoning/SKILL.md) | [adnanthekhan.com](https://adnanthekhan.com/2023/12/20/one-supply-chain-attack-to-rule-them-all/) |
 
-### Authorization
-| Skill | WSTG |
-|-------|------|
-| [authz-bypass](skills/authorization/authz-bypass/SKILL.md) | ATHZ-02, 04 |
-| [bola-idor](skills/authorization/bola-idor/SKILL.md) | ATHZ-04 |
-| [path-traversal](skills/authorization/path-traversal/SKILL.md) | ATHZ-01 |
-
-### Session
-| Skill | WSTG |
-|-------|------|
-| [cookie-attacks](skills/session/cookie-attacks/SKILL.md) | SESS-02, 06 |
-| [session-fixation](skills/session/session-fixation/SKILL.md) | SESS-01, 03, 04 |
-
-### Injection
-| Skill | WSTG |
-|-------|------|
-| [sql-injection](skills/injection/sql-injection/SKILL.md) | INPV-05 |
-| [xss-reflected](skills/injection/xss-reflected/SKILL.md) | INPV-01 |
-| [xss-stored](skills/injection/xss-stored/SKILL.md) | INPV-02 |
-| [cmd-injection](skills/injection/cmd-injection/SKILL.md) | INPV-12 |
-| [ssrf](skills/injection/ssrf/SKILL.md) | INPV-19 |
-| [ssti](skills/injection/ssti/SKILL.md) | INPV-18 |
-| [xxe](skills/injection/xxe/SKILL.md) | INPV-07 |
-| [http-request-smuggling](skills/injection/http-request-smuggling/SKILL.md) | INPV-15 |
-
-### Client-Side
-| Skill | WSTG |
-|-------|------|
-| [clickjacking](skills/client-side/clickjacking/SKILL.md) | CLNT-09 |
-| [cors-misconfig](skills/client-side/cors-misconfig/SKILL.md) | CLNT-07 |
-| [csrf](skills/client-side/csrf/SKILL.md) | SESS-05 |
-| [cspt](skills/client-side/cspt/SKILL.md) | blog_post |
-| [dom-xss](skills/client-side/dom-xss/SKILL.md) | CLNT-01 |
-
-### Web
-| Skill | WSTG |
-|-------|------|
-| [business-logic-flaws](skills/web/business-logic-flaws/SKILL.md) | BUSL-01–06 |
-
-### CI/CD
+#### API Hacking
 | Skill | Source |
 |-------|--------|
-| [github-actions-script-injection](skills/cicd/github-actions-script-injection/SKILL.md) | blog_post |
-| [github-actions-cache-poisoning](skills/cicd/github-actions-cache-poisoning/SKILL.md) | blog_post |
-| [pwn-request](skills/cicd/pwn-request/SKILL.md) | blog_post |
-| [cicd-bot-command-injection](skills/cicd/cicd-bot-command-injection/SKILL.md) | blog_post |
-| [self-hosted-runner-poisoning](skills/cicd/self-hosted-runner-poisoning/SKILL.md) | blog_post |
+| [graphql-idor-via-introspection-leak](skills/research/api-hacking/graphql-idor-via-introspection-leak/SKILL.md) | manual |
+
+#### Client-Side
+| Skill | Source |
+|-------|--------|
+| [cspt](skills/research/client-side/cspt/SKILL.md) | [matanber.com](https://matanber.com/blog/cspt-levels) |
+
+---
 
 ## Adding a New Skill
 
 ### From source material (recommended)
-Paste any security content and run `/distill-to-skill`. Claude extracts the technique
-and outputs a ready-to-save `SKILL.md` with the correct path and `marketplace.json` entry.
+Paste any security content and run `/distill-to-skill`. Claude extracts the technique,
+outputs a ready-to-save `SKILL.md`, and tells you which collection to add it to.
 
 ### Manually
-1. Create `skills/<category>/<technique-name>/SKILL.md`
-2. Ensure `name` in frontmatter matches the directory name exactly
-3. Add the skill path to `.claude-plugin/marketplace.json`
+1. Choose the right bucket: `owasp-wstg/` for framework-derived, `research/` for one-shot research
+2. Create `skills/<bucket>/<category>/<technique>/SKILL.md`
+3. Ensure `name` matches the directory name exactly
+4. Add the path to `.claude-plugin/marketplace.json`
