@@ -44,57 +44,57 @@ skills/
 
 ---
 
-### `owasp-wstg` — OWASP Web Security Testing Guide
+### `owasp-wstg` — [OWASP Web Security Testing Guide](https://owasp.org/www-project-web-security-testing-guide/stable/)
 
 #### Web Recon
-| Skill | WSTG |
-|-------|------|
-| [web-fingerprinting](skills/owasp-wstg/web-recon/web-fingerprinting/SKILL.md) | INFO-01–10 |
+| Skill | WSTG | Source |
+|-------|------|--------|
+| [web-fingerprinting](skills/owasp-wstg/web-recon/web-fingerprinting/SKILL.md) | INFO-01–10 | [WSTG](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/01-Information_Gathering/README) |
 
 #### Authentication
-| Skill | WSTG |
-|-------|------|
-| [auth-bypass](skills/owasp-wstg/authentication/auth-bypass/SKILL.md) | ATHN-01, 04–06 |
-| [default-credentials](skills/owasp-wstg/authentication/default-credentials/SKILL.md) | ATHN-02, 07 |
-| [password-reset-flaws](skills/owasp-wstg/authentication/password-reset-flaws/SKILL.md) | ATHN-07, 09 |
+| Skill | WSTG | Source |
+|-------|------|--------|
+| [auth-bypass](skills/owasp-wstg/authentication/auth-bypass/SKILL.md) | ATHN-01, 04–06 | [WSTG](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/04-Authentication_Testing/README) |
+| [default-credentials](skills/owasp-wstg/authentication/default-credentials/SKILL.md) | ATHN-02, 07 | [WSTG](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/04-Authentication_Testing/README) |
+| [password-reset-flaws](skills/owasp-wstg/authentication/password-reset-flaws/SKILL.md) | ATHN-07, 09 | [WSTG](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/04-Authentication_Testing/README) |
 
 #### Authorization
-| Skill | WSTG |
-|-------|------|
-| [authz-bypass](skills/owasp-wstg/authorization/authz-bypass/SKILL.md) | ATHZ-02, 04 |
-| [bola-idor](skills/owasp-wstg/authorization/bola-idor/SKILL.md) | ATHZ-04 |
-| [path-traversal](skills/owasp-wstg/authorization/path-traversal/SKILL.md) | ATHZ-01 |
+| Skill | WSTG | Source |
+|-------|------|--------|
+| [authz-bypass](skills/owasp-wstg/authorization/authz-bypass/SKILL.md) | ATHZ-02, 04 | [WSTG](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/05-Authorization_Testing/README) |
+| [bola-idor](skills/owasp-wstg/authorization/bola-idor/SKILL.md) | ATHZ-04 | [WSTG](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/05-Authorization_Testing/README) |
+| [path-traversal](skills/owasp-wstg/authorization/path-traversal/SKILL.md) | ATHZ-01 | [WSTG](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/05-Authorization_Testing/README) |
 
 #### Session
-| Skill | WSTG |
-|-------|------|
-| [cookie-attacks](skills/owasp-wstg/session/cookie-attacks/SKILL.md) | SESS-02, 06 |
-| [session-fixation](skills/owasp-wstg/session/session-fixation/SKILL.md) | SESS-01, 03, 04 |
+| Skill | WSTG | Source |
+|-------|------|--------|
+| [cookie-attacks](skills/owasp-wstg/session/cookie-attacks/SKILL.md) | SESS-02, 06 | [WSTG](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/06-Session_Management_Testing/README) |
+| [session-fixation](skills/owasp-wstg/session/session-fixation/SKILL.md) | SESS-01, 03, 04 | [WSTG](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/06-Session_Management_Testing/README) |
 
 #### Injection
-| Skill | WSTG |
-|-------|------|
-| [sql-injection](skills/owasp-wstg/injection/sql-injection/SKILL.md) | INPV-05 |
-| [xss-reflected](skills/owasp-wstg/injection/xss-reflected/SKILL.md) | INPV-01 |
-| [xss-stored](skills/owasp-wstg/injection/xss-stored/SKILL.md) | INPV-02 |
-| [cmd-injection](skills/owasp-wstg/injection/cmd-injection/SKILL.md) | INPV-12 |
-| [ssrf](skills/owasp-wstg/injection/ssrf/SKILL.md) | INPV-19 |
-| [ssti](skills/owasp-wstg/injection/ssti/SKILL.md) | INPV-18 |
-| [xxe](skills/owasp-wstg/injection/xxe/SKILL.md) | INPV-07 |
-| [http-request-smuggling](skills/owasp-wstg/injection/http-request-smuggling/SKILL.md) | INPV-15 |
+| Skill | WSTG | Source |
+|-------|------|--------|
+| [sql-injection](skills/owasp-wstg/injection/sql-injection/SKILL.md) | INPV-05 | [WSTG](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/07-Input_Validation_Testing/README) |
+| [xss-reflected](skills/owasp-wstg/injection/xss-reflected/SKILL.md) | INPV-01 | [WSTG](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/07-Input_Validation_Testing/README) |
+| [xss-stored](skills/owasp-wstg/injection/xss-stored/SKILL.md) | INPV-02 | [WSTG](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/07-Input_Validation_Testing/README) |
+| [cmd-injection](skills/owasp-wstg/injection/cmd-injection/SKILL.md) | INPV-12 | [WSTG](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/07-Input_Validation_Testing/README) |
+| [ssrf](skills/owasp-wstg/injection/ssrf/SKILL.md) | INPV-19 | [WSTG](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/07-Input_Validation_Testing/README) |
+| [ssti](skills/owasp-wstg/injection/ssti/SKILL.md) | INPV-18 | [WSTG](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/07-Input_Validation_Testing/README) |
+| [xxe](skills/owasp-wstg/injection/xxe/SKILL.md) | INPV-07 | [WSTG](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/07-Input_Validation_Testing/README) |
+| [http-request-smuggling](skills/owasp-wstg/injection/http-request-smuggling/SKILL.md) | INPV-15 | [WSTG](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/07-Input_Validation_Testing/README) |
 
 #### Client-Side
-| Skill | WSTG |
-|-------|------|
-| [dom-xss](skills/owasp-wstg/client-side/dom-xss/SKILL.md) | CLNT-01 |
-| [csrf](skills/owasp-wstg/client-side/csrf/SKILL.md) | SESS-05 |
-| [cors-misconfig](skills/owasp-wstg/client-side/cors-misconfig/SKILL.md) | CLNT-07 |
-| [clickjacking](skills/owasp-wstg/client-side/clickjacking/SKILL.md) | CLNT-09 |
+| Skill | WSTG | Source |
+|-------|------|--------|
+| [dom-xss](skills/owasp-wstg/client-side/dom-xss/SKILL.md) | CLNT-01 | [WSTG](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/11-Client-Side_Testing/README) |
+| [csrf](skills/owasp-wstg/client-side/csrf/SKILL.md) | SESS-05 | [WSTG](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/06-Session_Management_Testing/README) |
+| [cors-misconfig](skills/owasp-wstg/client-side/cors-misconfig/SKILL.md) | CLNT-07 | [WSTG](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/11-Client-Side_Testing/README) |
+| [clickjacking](skills/owasp-wstg/client-side/clickjacking/SKILL.md) | CLNT-09 | [WSTG](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/11-Client-Side_Testing/README) |
 
 #### Web
-| Skill | WSTG |
-|-------|------|
-| [business-logic-flaws](skills/owasp-wstg/web/business-logic-flaws/SKILL.md) | BUSL-01–06 |
+| Skill | WSTG | Source |
+|-------|------|--------|
+| [business-logic-flaws](skills/owasp-wstg/web/business-logic-flaws/SKILL.md) | BUSL-01–06 | [WSTG](https://owasp.org/www-project-web-security-testing-guide/stable/4-Web_Application_Security_Testing/10-Business_Logic_Testing/README) |
 
 ---
 
