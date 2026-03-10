@@ -8,6 +8,7 @@ metadata:
   category: client-side
   version: "0.1"
   source: https://owasp.org/www-project-web-security-testing-guide/stable/
+  source_types: framework
   wstg: WSTG-CLNT-01
 ---
 

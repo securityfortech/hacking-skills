@@ -13,6 +13,7 @@ compatibility: Designed for Claude Code.
 metadata:
   category: meta
   version: "0.1"
+  source_types: meta_skill
 ---
 
 # Distill Security Content to Skill

@@ -13,6 +13,7 @@ metadata:
   category: authorization
   version: "0.2"
   source: https://owasp.org/www-project-web-security-testing-guide/stable/
+  source_types: framework
   wstg: WSTG-ATHZ-04
 ---
 

@@ -12,6 +12,7 @@ metadata:
   category: web
   version: "0.1"
   source: https://owasp.org/www-project-web-security-testing-guide/stable/
+  source_types: framework
   wstg: WSTG-SESS-02, WSTG-SESS-06
 ---
 
