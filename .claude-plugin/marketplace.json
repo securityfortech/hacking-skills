@@ -10,7 +10,7 @@
   "plugins": [
     {
       "name": "meta-skills",
-      "description": "Skills for building and maintaining the skill library itself.",
+      "description": "Paste any source (blog post, CVE, writeup, pentest report) → generates a ready-to-save SKILL.md.",
       "source": "./",
       "strict": false,
       "skills": [
