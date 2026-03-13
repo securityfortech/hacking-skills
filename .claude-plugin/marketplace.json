@@ -14,7 +14,7 @@
       "source": "./",
       "strict": false,
       "skills": [
-        "./skills/distill-to-skill"
+        "./skills/meta-skills/distill-to-skill"
       ]
     },
     {

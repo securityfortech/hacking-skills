@@ -10,7 +10,8 @@ Skills are organized by **knowledge source**, not just vulnerability category.
 .claude-plugin/
   marketplace.json              ← plugin collections for distribution
 skills/
-  distill-to-skill/             ← meta-skill: generate new skills from any source
+  meta-skills/                  ← meta: skill generation tooling
+    distill-to-skill/
   owasp-wstg/                   ← systematic framework: OWASP Web Security Testing Guide
     authentication/
     authorization/
@@ -40,7 +41,7 @@ skills/
 | `owasp-wstg` | 22 | Systematic web testing methodology — install for complete coverage mindset |
 | `owasp-mastg` | 7 | Systematic mobile testing methodology (Android + iOS) — install for mobile coverage |
 | `research` | 7 | Cutting-edge tactical techniques — install for specific attack patterns |
-| `meta-skills` | [`/distill-to-skill`](skills/distill-to-skill/SKILL.md) | Paste any source → generates a new SKILL.md |
+| `meta-skills` | [`/distill-to-skill`](skills/meta-skills/distill-to-skill/SKILL.md) | Paste any source → generates a new SKILL.md |
 
 ---
 
@@ -49,7 +50,7 @@ skills/
 ### Meta
 | Skill | Description |
 |-------|-------------|
-| [distill-to-skill](skills/distill-to-skill/SKILL.md) | Extract reusable offensive knowledge from any source → SKILL.md |
+| [distill-to-skill](skills/meta-skills/distill-to-skill/SKILL.md) | Extract reusable offensive knowledge from any source → SKILL.md |
 
 ---
 

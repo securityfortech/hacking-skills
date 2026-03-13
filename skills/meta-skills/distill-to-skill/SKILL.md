@@ -28,6 +28,8 @@ Skills are organized by **knowledge source** first, then by category:
 
 ```
 skills/
+  meta-skills/              ← meta: skill generation tooling
+    distill-to-skill/
   owasp-wstg/               ← framework-derived: web security, systematic coverage
     <category>/
       <technique>/SKILL.md
