@@ -28,7 +28,10 @@ Skills are organized by **knowledge source** first, then by category:
 
 ```
 skills/
-  owasp-wstg/               ← framework-derived: systematic, comprehensive coverage
+  owasp-wstg/               ← framework-derived: web security, systematic coverage
+    <category>/
+      <technique>/SKILL.md
+  owasp-mastg/              ← framework-derived: mobile security (Android + iOS)
     <category>/
       <technique>/SKILL.md
   research/                 ← one-shot research: blog posts, CVEs, bug bounty writeups
@@ -37,13 +40,16 @@ skills/
 ```
 
 **Choose the right bucket:**
-- `owasp-wstg/` — if the source is the OWASP WSTG or another comprehensive security framework
-- `research/` — if the source is a blog post, CVE write-up, bug bounty report, ezine, CTF walkthrough, or any one-shot research
+- `owasp-wstg/` — source is OWASP WSTG or another comprehensive **web** security framework
+- `owasp-mastg/` — source is OWASP MASTG or another comprehensive **mobile** security framework (Android/iOS)
+- `research/` — source is a blog post, CVE write-up, bug bounty report, ezine, CTF walkthrough, or any one-shot research
 
 Examples:
 ```
 skills/owasp-wstg/injection/sql-injection/SKILL.md
 skills/owasp-wstg/authorization/bola-idor/SKILL.md
+skills/owasp-mastg/storage/mobile-insecure-storage/SKILL.md
+skills/owasp-mastg/crypto/mobile-weak-crypto/SKILL.md
 skills/research/cicd/pwn-request/SKILL.md
 skills/research/client-side/cspt/SKILL.md
 ```
@@ -128,6 +134,6 @@ Strip everything traceable before writing output:
 ## After Generating Output
 
 Tell the user:
-1. The full save path for each skill: `skills/owasp-wstg/<category>/<technique-slug>/SKILL.md` or `skills/research/<category>/<technique-slug>/SKILL.md`
-2. The entry to add to `.claude-plugin/marketplace.json` under the `owasp-wstg` or `research` plugin collection
+1. The full save path for each skill: `skills/owasp-wstg/<category>/<technique-slug>/SKILL.md`, `skills/owasp-mastg/<category>/<technique-slug>/SKILL.md`, or `skills/research/<category>/<technique-slug>/SKILL.md`
+2. The entry to add to `.claude-plugin/marketplace.json` under the `owasp-wstg`, `owasp-mastg`, or `research` plugin collection
 3. Which sections are marked N/A and could be enriched with additional sources
