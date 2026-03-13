@@ -35,12 +35,12 @@ skills/
 
 ## Plugin Collections
 
-| Collection | Description |
-|------------|-------------|
-| `owasp-wstg` | Systematic web testing methodology — install for complete coverage mindset |
-| `owasp-mastg` | Systematic mobile testing methodology (Android + iOS) — install for mobile coverage |
-| `research` | Cutting-edge tactical techniques — install for specific attack patterns |
-| `meta-skills` | Skill generation tooling |
+| Collection | Skills | Description |
+|------------|--------|-------------|
+| `owasp-wstg` | 22 | Systematic web testing methodology — install for complete coverage mindset |
+| `owasp-mastg` | 7 | Systematic mobile testing methodology (Android + iOS) — install for mobile coverage |
+| `research` | 7 | Cutting-edge tactical techniques — install for specific attack patterns |
+| `meta-skills` | [`/distill-to-skill`](skills/distill-to-skill/SKILL.md) | Paste any source → generates a new SKILL.md |
 
 ---
 
