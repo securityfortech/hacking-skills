@@ -162,3 +162,7 @@ steps:
 - Never share cache keys between untrusted (PR) and trusted (release/publish) workflows
 - Gate publish jobs behind environments with required reviewers
 - Use Gato-X or workflow audits to find `pull_request_target` + checkout combinations
+
+## Related Skills
+
+[[github-actions-script-injection]] is the technique that fires once a pwn-request gets RCE — the `preinstall` script or build step is effectively an injection point for arbitrary shell commands. [[self-hosted-runner-poisoning]] dramatically amplifies pwn-request impact: code executing on a persistent self-hosted runner can access long-lived credentials, VM state, and infrastructure not reachable from ephemeral GitHub-hosted runners. After secrets are exfiltrated, [[github-actions-cache-poisoning]] can be used as a pivot to affect downstream publish workflows.

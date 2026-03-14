@@ -114,3 +114,7 @@ Impact: Full password hash extraction character by character.
 - Input validation as defense-in-depth (not sole protection)
 - Least-privilege database accounts (no xp_cmdshell, no FILE privilege)
 - Disable detailed database error messages in production
+
+## Related Skills
+
+[[cmd-injection]] is the OS-level equivalent — both share the same root cause of treating input as code, and both can be tested with similar blind time-delay probes. When SQL injection on a login form bypasses authentication, that outcome is also covered in [[auth-bypass]]. If SQLi leads to file read (`LOAD_FILE`), [[path-traversal]] techniques apply for target file selection. In mobile apps, [[mobile-code-quality]] covers the same SQLite injection pattern against local databases.

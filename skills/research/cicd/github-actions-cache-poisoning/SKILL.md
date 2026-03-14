@@ -149,3 +149,7 @@ Impact: Security scan workflow executes attacker code with whatever secrets are 
 - Use `--ignore-scripts` in CI installs and run lifecycle scripts explicitly and audited
 - Restrict fork PR workflows from writing to the main cache namespace (GitHub's `GITHUB_REF` scoping helps but is not foolproof)
 - Monitor cache entry creation via audit logs; alert on unexpected entries near the 10 GB limit
+
+## Related Skills
+
+Cache poisoning requires an initial foothold in a workflow context — that foothold typically comes from [[github-actions-script-injection]] (injecting into a `run:` step) or [[pwn-request]] (executing `preinstall` scripts from attacker-controlled `package.json`). [[self-hosted-runner-poisoning]] makes cache poisoning more impactful because persistent runners carry poisoned state between jobs without needing a new LRU eviction cycle. The underlying primitive — writing to a shared resource without integrity verification — mirrors supply-chain techniques in [[pwn-request]].

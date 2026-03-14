@@ -163,3 +163,7 @@ Impact: Session restoration after logout; authentication state bypass.
 - Enforce `Cache-Control: no-cache, no-store` and `Pragma: no-cache` on all authenticated responses.
 - Use server-side session stores; do not rely solely on client-side encrypted tokens for auth state.
 - Generate session IDs with 256-bit entropy (AES-based); enforce minimum 50-character length.
+
+## Related Skills
+
+Session fixation and [[cookie-attacks]] are two sides of the same session management problem — fixation exploits the lack of rotation on login, while cookie-attacks exploit weak attributes after the session is established. [[csrf]] can be used to fix a session: if a login form accepts a GET with a `sessionid` parameter, a CSRF payload can force the victim's browser to submit it. Missing `__Host-` or `__Secure-` prefixes (covered in [[cookie-attacks]]) are also prerequisites for session fixation via HTTP subdomain injection.

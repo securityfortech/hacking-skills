@@ -174,3 +174,7 @@ Impact: Full admin interface access without triggering proxy-level access contro
 - Implement role-based access control (RBAC) enforced server-side; verify privilege on every
   state-changing operation.
 - Use Burp Autorize or OWASP ZAP's Access Control Testing add-on in CI/CD to catch regressions.
+
+## Related Skills
+
+[[bola-idor]] is the most concentrated form of authz bypass — where the authorization failure lives at the object level rather than the route level. [[path-traversal]] applies the same logic to the filesystem: escaping the intended directory is an authz bypass on file resources. When an endpoint accepts a numeric ID parameter, the full enumeration methodology lives in [[bola-idor]]. GraphQL APIs with object-level authz failures are covered in [[graphql-idor-via-introspection-leak]].

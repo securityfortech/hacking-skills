@@ -141,3 +141,7 @@ Impact: Victim receives a 404 response containing reflected XSS payload, executi
 - Use HTTP/2 end-to-end (H2C) between front-end and back-end to eliminate HTTP/1.1 ambiguity
 - Enable strict request parsing on back-end web servers (reject malformed chunked encoding)
 - Keep proxy and server software updated to versions with smuggling protections
+
+## Related Skills
+
+HTTP request smuggling can pivot into [[ssrf]] by prepending a smuggled request that reaches internal back-end services inaccessible from the internet. Capturing another user's request via the pipeline poison technique is functionally a session hijack, which overlaps with [[cookie-attacks]]. The reflected XSS variant of smuggling (injecting an XSS prefix that the next user's response inherits) is a delivery mechanism for [[xss-reflected]] that bypasses WAFs entirely because the XSS payload never appears in the victim's original request.

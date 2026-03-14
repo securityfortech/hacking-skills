@@ -181,3 +181,7 @@ Impact: SSO logout ineffective; authentication state persists across application
 - In SSO environments, implement SP-initiated single logout (SLO) that sends logout to the IdP.
 - Generate session IDs with a CSPRNG; minimum 256-bit entropy; minimum 50-character token length.
 - Implement idle and absolute session timeouts appropriate to application sensitivity.
+
+## Related Skills
+
+[[session-fixation]] and cookie-attacks attack the same session token lifecycle from different angles — fixation plants a known token before login, while cookie attacks exploit weak attributes or post-logout persistence. A missing `HttpOnly` flag directly enables [[xss-stored]] or [[xss-reflected]] to steal cookies via `document.cookie`. A missing `SameSite` attribute expands the [[csrf]] attack surface. Broad `Domain` scope allows a [[cors-misconfig]] on a subdomain to read or set the parent domain's session cookie.

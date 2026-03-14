@@ -133,3 +133,7 @@ let access = SecAccessControlCreateWithFlags(nil,
     [.biometryCurrentSet], nil)!
 // Any new enrollment invalidates this Keychain item
 ```
+
+## Related Skills
+
+[[auth-bypass]] on the web covers the same conceptual space — client-supplied flags and callback-only checks — but in a mobile runtime context. [[mobile-weak-crypto]] enables auth bypass when biometric auth is event-only rather than key-bound: without a `CryptoObject`, there is no cryptographic consequence to the biometric check. [[mobile-resilience]] controls like root/jailbreak detection are a prerequisite defense — Frida-based auth bypass requires an attached debugger or instrumentation framework that resilience controls are designed to detect.

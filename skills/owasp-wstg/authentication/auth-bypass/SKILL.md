@@ -138,3 +138,7 @@ Impact: Plaintext username and password captured; full account takeover.
 - Redirect all HTTP traffic to HTTPS; deploy HSTS.
 - Use strict PHP comparison (`===`) to prevent type juggling in authentication checks.
 - Set `Cache-Control: no-cache, no-store` and `Pragma: no-cache` on all authenticated responses.
+
+## Related Skills
+
+[[default-credentials]] is the first thing to try once a login form is found — auth bypass and default creds are two paths to the same goal. [[password-reset-flaws]] represents another common bypass vector: a weak reset flow can grant access without ever attacking the login form directly. If a SQL injectable login is found, [[sql-injection]] contains the full methodology for exploiting it. When a session cookie is obtained, validate its security posture using [[cookie-attacks]].

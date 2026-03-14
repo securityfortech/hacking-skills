@@ -146,3 +146,7 @@ func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationCh
     completionHandler(.useCredential, URLCredential(trust: serverTrust))
 }
 ```
+
+## Related Skills
+
+[[cors-misconfig]] on mobile backend APIs mirrors the same trust boundary issue as missing certificate pinning — both allow a network-positioned attacker to intercept or manipulate authenticated traffic. An empty `TrustManager` is functionally equivalent to [[ssrf]] from the attacker's perspective: the server (or in this case the app) makes authenticated requests to an unverified destination. [[mobile-insecure-storage]] is the fallback attack when network interception fails — if TLS is properly pinned, credentials may still be extractable from local storage.

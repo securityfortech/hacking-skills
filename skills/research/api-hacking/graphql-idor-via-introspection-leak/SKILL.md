@@ -126,3 +126,7 @@ async getInvoice(_, { id }, { db, currentUser }) {
 - Never trust client-supplied IDs — always scope DB queries to the authenticated user's context
 - Use a dedicated authorization layer (e.g. graphql-shield, OPA) applied uniformly across all resolvers
 - Treat GraphQL as a separate attack surface from REST even when they share the same database
+
+## Related Skills
+
+[[bola-idor]] is the underlying vulnerability that introspection exposes paths to find — introspection maps the schema while BOLA methodology validates each resolver for missing ownership checks. The general [[authz-bypass]] technique of replaying requests with a different session applies directly: enumerate types via introspection, then replay with Account B's session using Account A's object IDs. Introspection-disabled APIs can still be partially reconstructed using clairvoyance, mirroring the reconnaissance role of [[web-fingerprinting]] for REST targets.

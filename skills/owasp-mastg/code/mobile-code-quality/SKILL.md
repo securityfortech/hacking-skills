@@ -150,3 +150,7 @@ if currentVersion < minimumSupportedVersion { showForceUpdateDialog() }
 target_compile_options(mylib PRIVATE -fstack-protector-strong -D_FORTIFY_SOURCE=2 -fpie)
 target_link_options(mylib PRIVATE -Wl,-z,relro,-z,now -pie)
 ```
+
+## Related Skills
+
+[[mobile-platform-interaction]] is the delivery layer for many code quality vulnerabilities — exported components and deep links are how untrusted input reaches `rawQuery()` and `webView.loadUrl()`. SQLite injection via string concatenation here is the mobile equivalent of [[sql-injection]] on the web, with identical methodology and payloads adapted for Android's `rawQuery`. Deserialization of Parcelable data mirrors web-side unsafe deserialization and [[xxe]] in the sense that both exploit parser trust of attacker-controlled structured input.

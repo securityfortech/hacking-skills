@@ -137,3 +137,7 @@ Impact: Victim's account deleted; frame-busting protection rendered ineffective.
 - Do not rely solely on JavaScript frame-busting — all known JS techniques are bypassable
 - For high-value actions: require re-authentication or CSRF tokens that change per-page-load, reducing clickjacking payoff
 - Apply defense-in-depth: combine CSP frame-ancestors with SameSite=Strict cookies to require direct navigation for sensitive actions
+
+## Related Skills
+
+Clickjacking is a user-assisted [[csrf]] variant: rather than forging a request invisibly, it tricks the victim into clicking a UI element that triggers the sensitive action. If the target page lacks `SameSite` protections and also lacks framing protection, both clickjacking and [[csrf]] may be independently exploitable. If the page can be framed and also reflects user input, an [[xss-reflected]] payload can be delivered inside the frame to capture interactions. [[cors-misconfig]] on a parent-framed page can be combined to read responses from the framed origin.

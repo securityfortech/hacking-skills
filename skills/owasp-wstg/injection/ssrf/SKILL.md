@@ -125,3 +125,7 @@ Impact: OOB HTTP callback confirms SSRF; escalate to `file:///etc/passwd` in img
 - Disable unused URL schemes in HTTP client libraries
 - Return opaque responses (don't reflect fetched content body to user) for non-critical fetch features
 - Apply network-level controls: prevent web server from initiating connections to internal networks
+
+## Related Skills
+
+[[xxe]] and SSRF are deeply related: an XXE payload using an `http://` entity is a form of SSRF, and XXE can trigger SSRF to reach internal services or cloud metadata endpoints. [[http-request-smuggling]] can pivot into SSRF by using the smuggled prefix to reach internal back-end services that the front-end proxy would otherwise block. [[cors-misconfig]] exploits a similar trust boundary as SSRF — both let an attacker leverage the server's trusted network position. In mobile, [[mobile-network-security]] covers SSRF risks through mobile backend API misconfigurations.

@@ -132,3 +132,7 @@ Impact: Workflow executes with base repo's full write token — direct push to m
 - Pin third-party actions to full commit SHAs, not tags
 - Restrict `permissions:` to minimum required (`contents: read` only when possible)
 - Use `harden-runner` (StepSecurity) to detect unexpected network calls during CI
+
+## Related Skills
+
+[[github-actions-cache-poisoning]] is the natural escalation when script injection yields only a read-only token — the injected code writes poisoned cache entries that a later privileged workflow restores. [[pwn-request]] is the trigger mechanism that causes this skill to fire: a `pull_request_target` workflow checked out from an attacker-controlled fork is how script injection reaches a privileged context. [[cicd-bot-command-injection]] exploits the same untrusted-input-in-workflow pattern but through comment triggers rather than branch names.

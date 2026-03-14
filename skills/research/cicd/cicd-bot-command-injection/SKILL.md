@@ -162,3 +162,7 @@ jobs:
 - Use `environments:` with required reviewers for any job that accesses publish or deploy secrets
 - Separate the build (runs attacker code, no secrets) from the publish (no attacker code, has secrets)
 - Prefer `workflow_dispatch` with explicit input validation over comment-triggered commands
+
+## Related Skills
+
+[[github-actions-script-injection]] shares the same root cause: untrusted user-supplied input (a comment body vs. a branch name) reaches a shell execution context without sanitization. Once a bot command triggers a build of attacker-controlled PR code, the exploit path continues into [[pwn-request]] territory — `preinstall` scripts in the checked-out `package.json` run with workflow permissions. A zero-protection environment accessed via bot command can also be reached via [[github-actions-cache-poisoning]] if the bot workflow shares a cache key with a privileged workflow.

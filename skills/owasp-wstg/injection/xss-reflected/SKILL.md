@@ -119,3 +119,7 @@ Impact: Victim downloads malware when clicking any link on the page.
 - `X-XSS-Protection: 1; mode=block` (legacy browsers)
 - Avoid reflecting untrusted input into script blocks or event handlers
 - Use trusted templating engines with auto-escaping enabled by default
+
+## Related Skills
+
+When the injection point persists server-side, escalate to [[xss-stored]] for higher-impact payloads that don't require victim interaction. If the sink is in JavaScript code reading from `location.hash` or `document.referrer`, treat as [[dom-xss]] and look for dangerous sinks like `innerHTML` or `eval`. Reflected XSS can be used to bypass SameSite and execute [[csrf]] on the same origin, since the browser delivers both the XSS and the CSRF forged request from the target origin itself. Filter bypass encoding tricks used here also apply to [[cmd-injection]] when both share the same input sanitization layer.

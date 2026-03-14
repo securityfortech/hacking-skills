@@ -148,3 +148,7 @@ if requested_id not in user_resource_map[session_token]:
 - Centralize authorization in middleware — one place, not scattered per-route
 - Apply access control consistently across ALL HTTP methods and API versions
 - Disable or equally secure deprecated API versions
+
+## Related Skills
+
+[[authz-bypass]] covers the broader authorization failure class — BOLA is its most common manifestation. When the application uses GraphQL, [[graphql-idor-via-introspection-leak]] shows how to enumerate the schema to find every object type accepting an ID argument. [[path-traversal]] is an IDOR on the filesystem: the same "reference to a resource without ownership check" pattern applied to file paths. IDOR findings frequently reveal [[business-logic-flaws]] — such as skipping payment by referencing another order's paid state.

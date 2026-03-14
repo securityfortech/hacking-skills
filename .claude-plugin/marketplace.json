@@ -70,11 +70,13 @@
     },
     {
       "name": "meta-skills",
-      "description": "Paste any source (blog post, CVE, writeup, pentest report) → generates a ready-to-save SKILL.md.",
+      "description": "Meta-skills for skill generation, observation logging, and self-improvement. Paste any source → SKILL.md (/distill-to-skill); log run outcomes (/observe-skill); inspect failure history and propose amendments (/amend-skill).",
       "source": "./",
       "strict": false,
       "skills": [
-        "./skills/meta-skills/distill-to-skill"
+        "./skills/meta-skills/distill-to-skill",
+        "./skills/meta-skills/observe-skill",
+        "./skills/meta-skills/amend-skill"
       ]
     }
   ]

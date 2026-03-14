@@ -134,3 +134,7 @@ Impact: User account compromised via guessable password.
 - Return identical error messages for wrong username and wrong password.
 - Apply rate limiting per IP and per account on all authentication endpoints.
 - Restrict admin panel access by IP allowlist or VPN requirement where feasible.
+
+## Related Skills
+
+Default credentials are a specific subset of [[auth-bypass]] — the same forced-browsing and parameter-tampering techniques apply once credentials are obtained. If the login endpoint lacks rate limiting, use [[password-reset-flaws]] to check whether the reset flow also permits credential guessing. The platform fingerprinting step that leads here is covered in [[web-fingerprinting]], which identifies the exact CMS version to cross-reference with known default credential databases.

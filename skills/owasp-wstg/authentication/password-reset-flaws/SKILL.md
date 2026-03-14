@@ -145,3 +145,7 @@ Impact: Victim locked out of their own account; attacker maintains persistent ac
 - Hash passwords with bcrypt, scrypt, or Argon2; never store reversibly.
 - Enforce minimum password length (12+ characters), block common passwords using a deny-list.
 - Follow the OWASP Forgot Password Cheat Sheet for reset flow design.
+
+## Related Skills
+
+Password reset is one of the most common [[auth-bypass]] vectors — a flawed reset flow often completely sidesteps a hardened login page. A missing CSRF token on the reset form makes it immediately chainable with [[csrf]] for account takeover. If the reset endpoint reflects a predictable token in the URL, [[session-fixation]] techniques (token prediction analysis) apply to reconstruct the token space. Cross-user password modification via parameter swap is the same class of bug as [[authz-bypass]].

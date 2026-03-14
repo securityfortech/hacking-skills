@@ -150,3 +150,7 @@ Impact: Premium features activated without payment; revenue bypass.
 - Apply per-user, per-session counters for limited-use functions stored in the database (not cookies)
 - Implement audit logging for all financial and privilege operations with anomaly alerting
 - Enforce sequential workflow steps server-side: verify prerequisite steps are completed before allowing next step
+
+## Related Skills
+
+[[bola-idor]] frequently surfaces business logic violations — accessing another user's order ID often reveals whether they have applied discounts, completed payments, or hold different access tiers. Price manipulation via hidden field tampering is the same class of bug as [[authz-bypass]] parameter tampering. Race conditions in financial operations benefit from the same timing analysis as [[session-fixation]] window attacks. Workflow step-skipping that grants access to restricted features without paying is structurally identical to an [[auth-bypass]] on the payment gate.

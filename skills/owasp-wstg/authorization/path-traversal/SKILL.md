@@ -149,3 +149,7 @@ Impact: Full server compromise via interactive webshell.
 - Disable RFI at the WAF/server level; block outbound HTTP from application tier where possible.
 - Run application processes with minimal filesystem permissions.
 - Apply input validation rejecting `.`, `%`, `\`, `/` sequences in file-referencing parameters.
+
+## Related Skills
+
+Path traversal is an [[authz-bypass]] on the filesystem — the attacker escapes an intended directory boundary in the same way a session swap escapes a user boundary. When LFI chains to RCE via log poisoning, the code execution primitive is identical to [[cmd-injection]]. If the traversal target is a URL rather than a file path, look at [[ssrf]] for how server-side URL fetching can reach internal resources. In mobile apps, [[mobile-platform-interaction]] covers path traversal via Content Provider URIs.

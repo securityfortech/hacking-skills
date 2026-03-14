@@ -134,3 +134,7 @@ Impact: Sensitive server files exfiltrated without any visible response to attac
 - Use JSON instead of XML for APIs where XML is not mandated
 - Validate and sanitize XML against a strict schema that disallows DOCTYPE declarations
 - Apply allowlists for what XML content is permissible
+
+## Related Skills
+
+[[ssrf]] and XXE are two sides of the same server-trust-boundary problem: XXE with an `http://` SYSTEM entity is an SSRF primitive that can reach the cloud metadata endpoint just as a URL-parameter SSRF can. If XXE enables file disclosure and the file contains source code, use those paths as targets for [[path-traversal]] to enumerate the filesystem further. SVG upload XXE chains into [[xss-stored]] if the server renders the SVG in an HTML context without sanitization. The OOB data exfiltration technique here (DNS callback) is the same pattern used in blind [[ssrf]] detection.

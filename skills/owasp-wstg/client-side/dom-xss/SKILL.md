@@ -119,3 +119,7 @@ Impact: Cookie exfiltration; attacker can perform any action as the victim user.
 - For URL redirects: use an allowlist of permitted destinations; never pass `javascript:` to `location.href`
 - Content Security Policy: `script-src 'self'` prevents execution of injected scripts
 - Use frameworks with auto-escaping (React, Angular) which avoid direct DOM manipulation by default
+
+## Related Skills
+
+DOM XSS is a distinct exploit path from [[xss-reflected]] and [[xss-stored]] because the payload never reaches the server — a purely client-side taint flow. [[cspt]] frequently lands in a DOM XSS sink: a path traversal that redirects a `fetch()` to an attacker-controlled URL can return a payload that gets written to `innerHTML`. A [[cors-misconfig]] that lets cross-origin reads succeed enables exfiltrating data from DOM XSS contexts by relaying the stolen content through the attacker's domain.

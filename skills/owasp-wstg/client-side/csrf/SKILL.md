@@ -130,3 +130,7 @@ Impact: Target user account deleted when admin loads attacker's page.
 - For APIs: require `Content-Type: application/json` and reject `text/plain`; verify with CORS policy
 - Use custom request headers (e.g., `X-Requested-With`) which cannot be set by simple cross-origin forms
 - Framework built-in CSRF protection: Django `{% csrf_token %}`, Laravel `@csrf`, Rails `authenticity_token`
+
+## Related Skills
+
+[[cors-misconfig]] enables reading CSRF tokens cross-origin, completely undermining the synchronizer token pattern — check CORS before concluding CSRF is mitigated. [[xss-stored]] or [[xss-reflected]] on the same origin bypasses SameSite cookies and can directly forge CSRF-protected requests since the script runs in the target origin. [[clickjacking]] is a user-tricked CSRF variant where the victim is manipulated into clicking a hidden button rather than being silently redirected. CSRF on a login form can be used to plant a known session and enable [[session-fixation]].

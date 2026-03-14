@@ -137,3 +137,7 @@ Impact: Unauthenticated or low-effort admin access.
 - Audit all JS bundles for secrets before deployment; use environment variables at runtime.
 - Set framework-neutral cookie names.
 - Implement `Cache-Control: no-store` on error pages to prevent caching of stack traces.
+
+## Related Skills
+
+Fingerprinting is the entry point that directs all further testing. Once the stack is identified, move to [[auth-bypass]] if an admin panel is exposed, or [[sql-injection]] if the framework version has a known SQLi vulnerability. If a CMS login is found, [[default-credentials]] is the immediate next step. Source maps and hardcoded secrets discovered here can feed directly into [[business-logic-flaws]] by revealing undocumented API endpoints.

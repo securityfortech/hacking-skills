@@ -159,3 +159,7 @@ func denyDebugger() {
 - Enable ProGuard/R8 with aggressive obfuscation rules for all release builds
 - Strip debug symbols from production native libraries (`-s` linker flag)
 - Implement runtime integrity checks: verify APK signature and file hashes match expected values
+
+## Related Skills
+
+[[mobile-auth-bypass]] via Frida hook is the most common exploit that resilience controls defend against — without debugger detection and Frida detection, biometric bypasses are trivially reproducible. [[mobile-insecure-storage]] extraction requires root or jailbreak access that resilience detection is designed to catch. [[mobile-code-quality]] binary hardening (PIE, stack canaries) complements resilience: hardened native code makes memory corruption exploitation harder even when the attacker has successfully bypassed root/jailbreak detection.

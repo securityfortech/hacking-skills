@@ -108,3 +108,7 @@ Impact: Login form replaced with attacker-controlled phishing form for all profi
 - For file uploads: validate MIME type server-side, rename files to random names, serve from a separate origin
 - Content Security Policy: `script-src 'self'` prevents inline and external script injection
 - Restrict admin/log pages from rendering raw user-submitted data
+
+## Related Skills
+
+Stored XSS delivers a persistent payload that [[xss-reflected]] cannot achieve without a victim clicking a crafted link. It chains naturally into [[csrf]]: a stored payload can extract CSRF tokens or submit forged requests on behalf of every user who views the affected page, making account takeover fully automated. A session cookie exposed via stored XSS is the target of [[cookie-attacks]] — ensure `HttpOnly` is the defense. If the stored content is rendered in a JS template, the [[dom-xss]] sink analysis also applies.

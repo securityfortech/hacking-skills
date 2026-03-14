@@ -145,3 +145,7 @@ func application(_ app: UIApplication, open url: URL, options: [UIApplication.Op
     // process url
 }
 ```
+
+## Related Skills
+
+Deep link parameters injected into WebView navigation parallel [[dom-xss]] — URL scheme parameters that reach `loadUrl()` without validation are the mobile equivalent of a JavaScript-executing DOM sink. Exported Content Providers with path traversal are a mobile-specific form of [[path-traversal]] — the same `../` sequences apply to content URI paths. [[mobile-code-quality]] covers WebView `addJavascriptInterface` vulnerabilities and SQL injection via IPC, which are code-level defects often triggered by platform interaction vectors.

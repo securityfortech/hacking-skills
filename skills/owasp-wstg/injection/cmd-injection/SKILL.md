@@ -112,3 +112,7 @@ Impact: Web root directory listing; follow with credential file exfiltration.
 - Blocklist dangerous characters as defense-in-depth: `|`, `;`, `&`, `$`, `>`, `<`, `` ` ``, `\`, `!`, `>>`, `#`
 - Run web server processes with minimal OS privileges
 - Use language-specific safe alternatives: Java `ProcessBuilder`, Python `subprocess` with list args, PHP `escapeshellarg()`
+
+## Related Skills
+
+[[sql-injection]] and cmd-injection are the same fundamental failure class applied to different interpreters — the input validation methodology and blind time-based detection technique are directly transferable. [[ssti]] also achieves code execution via injection, but through a template engine rather than a shell; both share the mental model of breaking out of a string context into an execution context. If the command injection vector is a filename parameter, [[path-traversal]] payloads may also apply to the same parameter.

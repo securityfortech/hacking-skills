@@ -120,3 +120,7 @@ let sealedBox = try AES.GCM.seal(plaintext, using: key)
 - Use AES-GCM or AES-CBC with random IV; never reuse IV with the same key
 - Prefer authenticated encryption (AEAD) to detect tampering
 - Use `SecureRandom` (Android) / `SecRandomCopyBytes` (iOS) for all security-sensitive randomness
+
+## Related Skills
+
+[[mobile-insecure-storage]] and weak crypto are tightly paired: data stored in SQLite or SharedPreferences with a hardcoded AES key is effectively the same as storing it in plaintext. [[mobile-auth-bypass]] is often enabled by weak crypto — if biometric authentication relies on a poorly keyed token rather than a hardware-bound key, cryptographic bypass is possible. The predictable IV and weak PRNG issues here parallel the session token predictability analysis in [[session-fixation]] and [[cookie-attacks]] on the web side.

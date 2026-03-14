@@ -34,6 +34,10 @@ skills/
     client-side/
 ```
 
+## Skills Graph
+
+[`SKILLS_GRAPH.md`](SKILLS_GRAPH.md) — a map of content (MOC) showing attack chains, topic clusters, and cross-domain patterns. Start here when you need to plan a testing approach or understand how skills relate to each other.
+
 ## Plugin Collections
 
 | Collection | Skills | Description |
@@ -41,7 +45,7 @@ skills/
 | `owasp-wstg` | 22 | Systematic web testing methodology — install for complete coverage mindset |
 | `owasp-mastg` | 7 | Systematic mobile testing methodology (Android + iOS) — install for mobile coverage |
 | `research` | 7 | Cutting-edge tactical techniques — install for specific attack patterns |
-| `meta-skills` | [`/distill-to-skill`](skills/meta-skills/distill-to-skill/SKILL.md) | Paste any source → generates a new SKILL.md |
+| `meta-skills` | [`/distill-to-skill`](skills/meta-skills/distill-to-skill/SKILL.md), [`/observe-skill`](skills/meta-skills/observe-skill/SKILL.md), [`/amend-skill`](skills/meta-skills/amend-skill/SKILL.md) | Skill generation, run logging, and self-improvement |
 
 ---
 
@@ -51,6 +55,8 @@ skills/
 | Skill | Description |
 |-------|-------------|
 | [distill-to-skill](skills/meta-skills/distill-to-skill/SKILL.md) | Extract reusable offensive knowledge from any source → SKILL.md |
+| [observe-skill](skills/meta-skills/observe-skill/SKILL.md) | Log skill run outcomes to `observations/<skill-name>/runs.md` |
+| [amend-skill](skills/meta-skills/amend-skill/SKILL.md) | Inspect failure history and propose targeted amendments to a skill |
 
 ---
 

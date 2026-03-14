@@ -117,3 +117,7 @@ Impact: Internal admin data returned to attacker-controlled page.
 - Add `Vary: Origin` header when the response differs by origin (prevents cache poisoning)
 - For APIs: use `Content-Type: application/json` requirement and validate all CORS origins per request
 - Audit subdomain CORS trust — each trusted subdomain is an expansion of the attack surface
+
+## Related Skills
+
+[[csrf]] and CORS misconfiguration are tightly coupled: a CORS origin-reflection bug lets an attacker read CSRF tokens cross-origin, turning a CSRF-protected form into an exploitable target. When [[ssrf]] and CORS coexist, the server's trusted position in the internal network can be leveraged similarly — both attacks abuse trust boundaries. A [[dom-xss]] on a CORS-trusted origin can exfiltrate data from the victim's authenticated API responses. Subdomain CORS trust also expands the scope of [[cookie-attacks]] because subdomain XSS can set or read parent-domain cookies.

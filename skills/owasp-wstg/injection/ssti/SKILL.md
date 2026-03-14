@@ -121,3 +121,7 @@ Impact: RCE as web server user; escalate to webshell upload.
 - Validate and sanitize template input against a strict pattern
 - Run template rendering in a restricted subprocess with limited OS permissions
 - Use logic-less templating engines (Mustache, Handlebars with `allowProtoProperties: false`) for user-facing customization
+
+## Related Skills
+
+[[cmd-injection]] and SSTI both achieve arbitrary OS command execution via injection into an interpreter — SSTI routes through a template sandbox escape while cmd-injection hits the shell directly. The detection methodology (inject an expression, observe evaluation) mirrors [[xss-reflected]] canary probing but the consequence is server-side rather than client-side. SSTI is often found in the same parameters that also carry [[xss-reflected]] payloads — a parameter that reflects `{{7*7}}` as `49` has SSTI; one that reflects `<script>` unencoded has XSS.

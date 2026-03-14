@@ -126,3 +126,7 @@ let access = SecAccessControlCreateWithFlags(nil, kSecAttrAccessibleWhenPasscode
 var url = URL(fileURLWithPath: sensitiveFilePath)
 try url.setResourceValues({ v in v.isExcludedFromBackup = true }())
 ```
+
+## Related Skills
+
+[[mobile-weak-crypto]] is the direct mitigation path: data that must be stored locally should be protected using properly implemented cryptography with keys in the Android Keystore or iOS Secure Enclave. [[mobile-auth-bypass]] overlaps when insecure storage holds auth tokens — a stolen JWT from SharedPreferences enables direct backend access without triggering biometric checks. [[mobile-resilience]] controls (root/jailbreak detection) are the last line of defense if storage protections fail, since extraction typically requires root or jailbreak access.

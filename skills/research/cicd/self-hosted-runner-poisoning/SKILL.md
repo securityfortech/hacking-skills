@@ -163,3 +163,7 @@ runs-on: [self-hosted, linux, internal]
 - Restrict self-hosted runners to internal workflows only; never allow fork PRs to target them
 - Audit runner labels in all workflow files; alert on PRs that modify `runs-on` values
 - Rotate all credentials accessible from runner environments regularly
+
+## Related Skills
+
+[[pwn-request]] is the most common trigger path that lands code on a self-hosted runner — a `pull_request_target` workflow that checks out PR code and runs it on a persistent self-hosted runner is the textbook combination. From there, [[github-actions-script-injection]] payloads can run to exfiltrate long-lived credentials stored in the runner environment. Once persistent access is established, [[github-actions-cache-poisoning]] can be executed from the compromised runner to poison downstream privileged workflows without requiring another PR.

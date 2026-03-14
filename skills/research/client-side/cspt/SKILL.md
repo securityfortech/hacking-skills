@@ -156,3 +156,7 @@ fetch("/api/posts/" + postId + "/comments")
 - Validate that path parameters match expected format (alphanumeric IDs, UUIDs) before use
 - Do not rely on WAF depth-checking alone — fix at the source
 - Audit all `fetch()`/XHR calls where the URL is constructed via string concatenation or template literals with user input
+
+## Related Skills
+
+[[dom-xss]] is the most common impact of CSPT: the path traversal redirects `fetch()` to an attacker-controlled URL that returns a payload rendered into a dangerous DOM sink like `innerHTML`. [[csrf]] is another direct chain — CSPT can redirect a form's fetch target to change the endpoint a state-changing submission hits, effectively forging the destination of an authenticated request. The WAF encoding bypass matrix here parallels [[path-traversal]] encoding techniques, since both exploit URL normalization disagreements between parser layers.
