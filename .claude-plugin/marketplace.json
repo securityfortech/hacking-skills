@@ -9,15 +9,6 @@
   },
   "plugins": [
     {
-      "name": "meta-skills",
-      "description": "Paste any source (blog post, CVE, writeup, pentest report) → generates a ready-to-save SKILL.md.",
-      "source": "./",
-      "strict": false,
-      "skills": [
-        "./skills/meta-skills/distill-to-skill"
-      ]
-    },
-    {
       "name": "owasp-wstg",
       "description": "Systematic web security testing skills distilled from the OWASP Web Security Testing Guide. Covers recon, authentication, authorization, session management, injection, client-side, and business logic.",
       "source": "./",
@@ -75,6 +66,15 @@
         "./skills/research/cicd/self-hosted-runner-poisoning",
         "./skills/research/api-hacking/graphql-idor-via-introspection-leak",
         "./skills/research/client-side/cspt"
+      ]
+    },
+    {
+      "name": "meta-skills",
+      "description": "Paste any source (blog post, CVE, writeup, pentest report) → generates a ready-to-save SKILL.md.",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/meta-skills/distill-to-skill"
       ]
     }
   ]
