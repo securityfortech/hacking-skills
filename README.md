@@ -44,7 +44,7 @@ skills/
 |------------|--------|-------------|
 | `owasp-wstg` | 22 | Systematic web testing methodology — install for complete coverage mindset |
 | `owasp-mastg` | 7 | Systematic mobile testing methodology (Android + iOS) — install for mobile coverage |
-| `research` | 7 | Cutting-edge tactical techniques — install for specific attack patterns |
+| `research` | 11 | Cutting-edge tactical techniques — install for specific attack patterns |
 | `meta-skills` | [`/distill-to-skill`](skills/meta-skills/distill-to-skill/SKILL.md), [`/observe-skill`](skills/meta-skills/observe-skill/SKILL.md), [`/amend-skill`](skills/meta-skills/amend-skill/SKILL.md) | Skill generation, run logging, and self-improvement |
 
 ---
@@ -148,6 +148,22 @@ skills/
 | Skill | Source |
 |-------|--------|
 | [cspt](skills/research/client-side/cspt/SKILL.md) | [matanber.com](https://matanber.com/blog/cspt-levels) |
+| [open-redirect](skills/research/client-side/open-redirect/SKILL.md) | [VibeSec](https://github.com/BehiSecc/VibeSec-Skill) |
+
+#### Web
+| Skill | Source |
+|-------|--------|
+| [insecure-file-upload](skills/research/web/insecure-file-upload/SKILL.md) | [VibeSec](https://github.com/BehiSecc/VibeSec-Skill) |
+
+#### Authentication
+| Skill | Source |
+|-------|--------|
+| [jwt-misconfig](skills/research/authentication/jwt-misconfig/SKILL.md) | [VibeSec](https://github.com/BehiSecc/VibeSec-Skill) |
+
+#### Authorization
+| Skill | Source |
+|-------|--------|
+| [mass-assignment](skills/research/authorization/mass-assignment/SKILL.md) | [VibeSec](https://github.com/BehiSecc/VibeSec-Skill) |
 
 ---
 

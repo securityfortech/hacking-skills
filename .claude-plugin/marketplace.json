@@ -55,7 +55,7 @@
     },
     {
       "name": "research",
-      "description": "Tactical offensive security skills distilled from security research, blog posts, CVEs, and bug bounty writeups. Covers CI/CD attacks, API abuse, and cutting-edge client-side techniques.",
+      "description": "Tactical offensive security skills distilled from security research, blog posts, CVEs, and bug bounty writeups. Covers CI/CD attacks, API abuse, client-side techniques, file upload, JWT misconfig, open redirect, and mass assignment.",
       "source": "./",
       "strict": false,
       "skills": [
@@ -65,7 +65,11 @@
         "./skills/research/cicd/cicd-bot-command-injection",
         "./skills/research/cicd/self-hosted-runner-poisoning",
         "./skills/research/api-hacking/graphql-idor-via-introspection-leak",
-        "./skills/research/client-side/cspt"
+        "./skills/research/client-side/cspt",
+        "./skills/research/client-side/open-redirect",
+        "./skills/research/web/insecure-file-upload",
+        "./skills/research/authentication/jwt-misconfig",
+        "./skills/research/authorization/mass-assignment"
       ]
     },
     {
