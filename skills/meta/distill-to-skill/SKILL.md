@@ -24,36 +24,47 @@ so another AI can use it to hunt the same class of vulnerability on a new target
 
 ## Repository Structure
 
-Skills are organized by **knowledge source** first, then by category:
+Skills are organized by domain, then category:
 
 ```
 skills/
-  meta-skills/              ← meta: skill generation tooling
+  meta/              ← skill generation and self-improvement tooling
     distill-to-skill/
-  owasp-wstg/               ← framework-derived: web security, systematic coverage
-    <category>/
-      <technique>/SKILL.md
-  owasp-mastg/              ← framework-derived: mobile security (Android + iOS)
-    <category>/
-      <technique>/SKILL.md
-  research/                 ← one-shot research: blog posts, CVEs, bug bounty writeups
-    <category>/
-      <technique>/SKILL.md
+    observe-skill/
+    amend-skill/
+  web/               ← web application security
+    recon/
+    auth/
+    session/
+    authz/
+    injection/
+    client-side/
+    logic/
+  mobile/            ← mobile security (Android + iOS)
+    storage/
+    crypto/
+    auth/
+    network/
+    platform/
+    code/
+    resilience/
+  cicd/              ← CI/CD pipeline security
 ```
 
 **Choose the right bucket:**
-- `owasp-wstg/` — source is OWASP WSTG or another comprehensive **web** security framework
-- `owasp-mastg/` — source is OWASP MASTG or another comprehensive **mobile** security framework (Android/iOS)
-- `research/` — source is a blog post, CVE write-up, bug bounty report, ezine, CTF walkthrough, or any one-shot research
+- `web/` — web application vulnerabilities (any source: OWASP WSTG, blog posts, CVEs, bug bounty)
+- `mobile/` — mobile security (any source: OWASP MASTG, research, writeups)
+- `cicd/` — CI/CD pipeline security (any source)
+- `meta/` — skill tooling
 
 Examples:
 ```
-skills/owasp-wstg/injection/sql-injection/SKILL.md
-skills/owasp-wstg/authorization/bola-idor/SKILL.md
-skills/owasp-mastg/storage/mobile-insecure-storage/SKILL.md
-skills/owasp-mastg/crypto/mobile-weak-crypto/SKILL.md
-skills/research/cicd/pwn-request/SKILL.md
-skills/research/client-side/cspt/SKILL.md
+skills/web/injection/sql-injection/SKILL.md
+skills/web/authz/bola-idor/SKILL.md
+skills/mobile/storage/mobile-insecure-storage/SKILL.md
+skills/mobile/crypto/mobile-weak-crypto/SKILL.md
+skills/cicd/pwn-request/SKILL.md
+skills/web/client-side/cspt/SKILL.md
 ```
 
 ## Understanding the Source
@@ -136,6 +147,6 @@ Strip everything traceable before writing output:
 ## After Generating Output
 
 Tell the user:
-1. The full save path for each skill: `skills/owasp-wstg/<category>/<technique-slug>/SKILL.md`, `skills/owasp-mastg/<category>/<technique-slug>/SKILL.md`, or `skills/research/<category>/<technique-slug>/SKILL.md`
-2. The entry to add to `.claude-plugin/marketplace.json` under the `owasp-wstg`, `owasp-mastg`, or `research` plugin collection
+1. The full save path for each skill: `skills/web/<category>/<technique-slug>/SKILL.md`, `skills/mobile/<category>/<technique-slug>/SKILL.md`, `skills/cicd/<technique-slug>/SKILL.md`, or `skills/meta/<technique-slug>/SKILL.md`
+2. The entry to add to `.claude-plugin/marketplace.json` under the `web`, `mobile`, `cicd`, or `meta` plugin collection
 3. Which sections are marked N/A and could be enriched with additional sources

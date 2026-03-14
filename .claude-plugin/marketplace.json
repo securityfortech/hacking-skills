@@ -5,82 +5,82 @@
   },
   "metadata": {
     "description": "Claude Code skills for finding bugs and vulnerabilities — bug bounty, pentest, CTF, code review.",
-    "version": "0.2.0"
+    "version": "0.3.0"
   },
   "plugins": [
     {
-      "name": "owasp-wstg",
-      "description": "Systematic web security testing skills distilled from the OWASP Web Security Testing Guide. Covers recon, authentication, authorization, session management, injection, client-side, and business logic.",
+      "name": "web",
+      "description": "Web application security skills covering recon, authentication, authorization, session management, injection, client-side attacks, and business logic. Distilled from OWASP WSTG, security research, and bug bounty writeups.",
       "source": "./",
       "strict": false,
       "skills": [
-        "./skills/owasp-wstg/web-recon/web-fingerprinting",
-        "./skills/owasp-wstg/authentication/auth-bypass",
-        "./skills/owasp-wstg/authentication/default-credentials",
-        "./skills/owasp-wstg/authentication/password-reset-flaws",
-        "./skills/owasp-wstg/authorization/authz-bypass",
-        "./skills/owasp-wstg/authorization/bola-idor",
-        "./skills/owasp-wstg/authorization/path-traversal",
-        "./skills/owasp-wstg/session/cookie-attacks",
-        "./skills/owasp-wstg/session/session-fixation",
-        "./skills/owasp-wstg/injection/sql-injection",
-        "./skills/owasp-wstg/injection/xss-reflected",
-        "./skills/owasp-wstg/injection/xss-stored",
-        "./skills/owasp-wstg/injection/cmd-injection",
-        "./skills/owasp-wstg/injection/ssrf",
-        "./skills/owasp-wstg/injection/ssti",
-        "./skills/owasp-wstg/injection/xxe",
-        "./skills/owasp-wstg/injection/http-request-smuggling",
-        "./skills/owasp-wstg/client-side/dom-xss",
-        "./skills/owasp-wstg/client-side/csrf",
-        "./skills/owasp-wstg/client-side/cors-misconfig",
-        "./skills/owasp-wstg/client-side/clickjacking",
-        "./skills/owasp-wstg/web/business-logic-flaws"
+        "./skills/web/recon/web-fingerprinting",
+        "./skills/web/auth/auth-bypass",
+        "./skills/web/auth/default-credentials",
+        "./skills/web/auth/password-reset-flaws",
+        "./skills/web/auth/jwt-misconfig",
+        "./skills/web/session/cookie-attacks",
+        "./skills/web/session/session-fixation",
+        "./skills/web/authz/authz-bypass",
+        "./skills/web/authz/bola-idor",
+        "./skills/web/authz/path-traversal",
+        "./skills/web/authz/mass-assignment",
+        "./skills/web/injection/sql-injection",
+        "./skills/web/injection/xss-reflected",
+        "./skills/web/injection/xss-stored",
+        "./skills/web/injection/cmd-injection",
+        "./skills/web/injection/ssrf",
+        "./skills/web/injection/ssti",
+        "./skills/web/injection/xxe",
+        "./skills/web/injection/http-request-smuggling",
+        "./skills/web/client-side/dom-xss",
+        "./skills/web/client-side/csrf",
+        "./skills/web/client-side/cors-misconfig",
+        "./skills/web/client-side/clickjacking",
+        "./skills/web/client-side/cspt",
+        "./skills/web/client-side/open-redirect",
+        "./skills/web/logic/business-logic-flaws",
+        "./skills/web/logic/insecure-file-upload",
+        "./skills/web/logic/graphql-idor-via-introspection-leak"
       ]
     },
     {
-      "name": "owasp-mastg",
-      "description": "Mobile application security testing skills distilled from the OWASP Mobile Application Security Testing Guide (MASTG). Covers Android and iOS: insecure storage, weak cryptography, authentication bypass, network security, platform interaction, code quality, and resilience against reverse engineering.",
+      "name": "mobile",
+      "description": "Mobile application security skills covering Android and iOS: insecure storage, weak cryptography, authentication bypass, network security, platform interaction, code quality, and resilience against reverse engineering.",
       "source": "./",
       "strict": false,
       "skills": [
-        "./skills/owasp-mastg/storage/mobile-insecure-storage",
-        "./skills/owasp-mastg/crypto/mobile-weak-crypto",
-        "./skills/owasp-mastg/auth/mobile-auth-bypass",
-        "./skills/owasp-mastg/network/mobile-network-security",
-        "./skills/owasp-mastg/platform/mobile-platform-interaction",
-        "./skills/owasp-mastg/code/mobile-code-quality",
-        "./skills/owasp-mastg/resilience/mobile-resilience"
+        "./skills/mobile/storage/mobile-insecure-storage",
+        "./skills/mobile/crypto/mobile-weak-crypto",
+        "./skills/mobile/auth/mobile-auth-bypass",
+        "./skills/mobile/network/mobile-network-security",
+        "./skills/mobile/platform/mobile-platform-interaction",
+        "./skills/mobile/code/mobile-code-quality",
+        "./skills/mobile/resilience/mobile-resilience"
       ]
     },
     {
-      "name": "research",
-      "description": "Tactical offensive security skills distilled from security research, blog posts, CVEs, and bug bounty writeups. Covers CI/CD attacks, API abuse, client-side techniques, file upload, JWT misconfig, open redirect, and mass assignment.",
+      "name": "cicd",
+      "description": "CI/CD pipeline security skills covering GitHub Actions script injection, cache poisoning, pwn-request, bot command injection, and self-hosted runner poisoning.",
       "source": "./",
       "strict": false,
       "skills": [
-        "./skills/research/cicd/github-actions-script-injection",
-        "./skills/research/cicd/github-actions-cache-poisoning",
-        "./skills/research/cicd/pwn-request",
-        "./skills/research/cicd/cicd-bot-command-injection",
-        "./skills/research/cicd/self-hosted-runner-poisoning",
-        "./skills/research/api-hacking/graphql-idor-via-introspection-leak",
-        "./skills/research/client-side/cspt",
-        "./skills/research/client-side/open-redirect",
-        "./skills/research/web/insecure-file-upload",
-        "./skills/research/authentication/jwt-misconfig",
-        "./skills/research/authorization/mass-assignment"
+        "./skills/cicd/github-actions-script-injection",
+        "./skills/cicd/github-actions-cache-poisoning",
+        "./skills/cicd/pwn-request",
+        "./skills/cicd/cicd-bot-command-injection",
+        "./skills/cicd/self-hosted-runner-poisoning"
       ]
     },
     {
-      "name": "meta-skills",
-      "description": "Meta-skills for skill generation, observation logging, and self-improvement. Paste any source → SKILL.md (/distill-to-skill); log run outcomes (/observe-skill); inspect failure history and propose amendments (/amend-skill).",
+      "name": "meta",
+      "description": "Paste any source → SKILL.md (/distill-to-skill); log run outcomes (/observe-skill); inspect failure history and propose amendments (/amend-skill).",
       "source": "./",
       "strict": false,
       "skills": [
-        "./skills/meta-skills/distill-to-skill",
-        "./skills/meta-skills/observe-skill",
-        "./skills/meta-skills/amend-skill"
+        "./skills/meta/distill-to-skill",
+        "./skills/meta/observe-skill",
+        "./skills/meta/amend-skill"
       ]
     }
   ]
