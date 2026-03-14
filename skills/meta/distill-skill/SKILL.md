@@ -29,7 +29,7 @@ Skills are organized by domain, then category:
 ```
 skills/
   meta/              ← skill generation and self-improvement tooling
-    distill-to-skill/
+    distill-skill/
     observe-skill/
     amend-skill/
   web/               ← web application security

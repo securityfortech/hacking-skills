@@ -74,7 +74,7 @@
     },
     {
       "name": "meta",
-      "description": "Paste any source → SKILL.md (/distill-to-skill); log run outcomes (/observe-skill); inspect failure history and propose amendments (/amend-skill).",
+      "description": "Paste any source → SKILL.md (/distill-skill); log run outcomes (/observe-skill); inspect failure history and propose amendments (/amend-skill).",
       "source": "./",
       "strict": false,
       "skills": [
