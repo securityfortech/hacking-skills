@@ -42,8 +42,8 @@ risk because it is trivial to test and almost always yields high-severity findin
 ## Methodology
 
 1. Map all object identifiers across the entire app — URLs, query params, request body, cookies, headers.
-2. Create two accounts (User A, User B). Capture requests with User A's session.
-3. Replay each request using User B's token with User A's object IDs.
+2. Create two accounts with distinctive names (e.g. `attacker_a`, `victim_b`). Use separate browsers to keep sessions fully isolated. Fully populate the victim account with varied resources and document all encountered IDs. Capture all requests with the victim session.
+3. Replay each request using the attacker token with the victim's object IDs.
 4. Compare responses — same data returned = BOLA confirmed.
 5. Test unauthenticated: remove `Authorization` header entirely.
 6. Test write operations (PUT/PATCH/DELETE) — impact is higher than reads.
