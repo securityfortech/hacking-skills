@@ -1,5 +1,5 @@
 ---
-name: distill-to-skill
+name: distill-skill
 description: >
   Use when the user wants to extract reusable offensive security knowledge from
   any source and generate a SKILL.md file. Trigger on: "distill this",

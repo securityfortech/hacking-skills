@@ -18,5 +18,5 @@ This is the difference between following a checklist and understanding the domai
 
 ## Adding new skills
 
-Paste any source material (blog post, CVE, writeup, pentest report) and run `/distill-to-skill`.
+Paste any source material (blog post, CVE, writeup, pentest report) and run `/distill-skill`.
 It outputs a ready-to-save `SKILL.md` and the marketplace.json entry.

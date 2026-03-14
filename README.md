@@ -9,7 +9,7 @@ Claude Code skills for finding bugs and vulnerabilities — bug bounty, pentest,
   marketplace.json              ← plugin collections for distribution
 skills/
   meta/                         ← skill generation and self-improvement tooling
-    distill-to-skill/
+    distill-skill/
     observe-skill/
     amend-skill/
   web/                          ← web application security
@@ -42,7 +42,7 @@ skills/
 | `web` | 28 | Web application security — recon, auth, session, authz, injection, client-side, logic |
 | `mobile` | 7 | Mobile security methodology (Android + iOS) — install for mobile coverage |
 | `cicd` | 5 | CI/CD pipeline attack techniques — install for supply chain testing |
-| `meta` | [`/distill-to-skill`](skills/meta/distill-to-skill/SKILL.md), [`/observe-skill`](skills/meta/observe-skill/SKILL.md), [`/amend-skill`](skills/meta/amend-skill/SKILL.md) | Skill generation, run logging, and self-improvement |
+| `meta` | [`/distill-skill`](skills/meta/distill-skill/SKILL.md), [`/observe-skill`](skills/meta/observe-skill/SKILL.md), [`/amend-skill`](skills/meta/amend-skill/SKILL.md) | Skill generation, run logging, and self-improvement |
 
 ---
 
@@ -51,7 +51,7 @@ skills/
 ### Meta
 | Skill | Description |
 |-------|-------------|
-| [distill-to-skill](skills/meta/distill-to-skill/SKILL.md) | Extract reusable offensive knowledge from any source → SKILL.md |
+| [distill-skill](skills/meta/distill-skill/SKILL.md) | Extract reusable offensive knowledge from any source → SKILL.md |
 | [observe-skill](skills/meta/observe-skill/SKILL.md) | Log skill run outcomes to `observations/<skill-name>/runs.md` |
 | [amend-skill](skills/meta/amend-skill/SKILL.md) | Inspect failure history and propose targeted amendments to a skill |
 
@@ -146,7 +146,7 @@ skills/
 ## Adding a New Skill
 
 ### From source material (recommended)
-Paste any security content and run `/distill-to-skill`. Claude extracts the technique,
+Paste any security content and run `/distill-skill`. Claude extracts the technique,
 outputs a ready-to-save `SKILL.md`, and tells you which collection to add it to.
 
 ### Manually

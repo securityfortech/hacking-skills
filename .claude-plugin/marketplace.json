@@ -78,7 +78,7 @@
       "source": "./",
       "strict": false,
       "skills": [
-        "./skills/meta/distill-to-skill",
+        "./skills/meta/distill-skill",
         "./skills/meta/observe-skill",
         "./skills/meta/amend-skill"
       ]
