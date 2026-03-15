@@ -1,5 +1,15 @@
 # hacking-skills
 
+## Picking an agent role
+
+When the user starts an engagement, pick the right agent role and read its `AGENT.md` first:
+
+- **Web app / API target** → `agents/webapp-pentester/AGENT.md`
+- **Mobile app (Android/iOS)** → `agents/mobile-pentester/AGENT.md`
+- **CI/CD / GitHub Actions** → `agents/cicd-auditor/AGENT.md`
+
+The agent file tells you which skills to load and the engagement methodology to follow.
+
 ## Using the skills graph
 
 When the user asks you to test, audit, pentest, find bugs, or hunt vulnerabilities on a target:

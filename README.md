@@ -31,6 +31,16 @@ skills/
   cicd/                         ← CI/CD pipeline security
 ```
 
+## Agents
+
+Role-based agents that orchestrate skills into a full engagement workflow.
+
+| Agent | Target |
+|-------|--------|
+| [webapp-pentester](agents/webapp-pentester/AGENT.md) | Web applications and APIs |
+| [mobile-pentester](agents/mobile-pentester/AGENT.md) | Android and iOS apps |
+| [cicd-auditor](agents/cicd-auditor/AGENT.md) | GitHub Actions and CI/CD pipelines |
+
 ## Skills Graph
 
 [`SKILLS_GRAPH.md`](SKILLS_GRAPH.md) — a map of content (MOC) showing attack chains, topic clusters, and cross-domain patterns. Start here when you need to plan a testing approach or understand how skills relate to each other.
