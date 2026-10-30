@@ -9,7 +9,7 @@ description: >
   or serves user-supplied files. Detects extension bypass (shell.php.jpg), null byte
   injection, double extension, ImageMagick exploits, and content-type confusion.
 license: Apache-2.0
-compatibility: Designed for Claude Code. Tools: Burp Suite, exiftool.
+compatibility: "Designed for Claude Code. Tools: Burp Suite, exiftool."
 metadata:
   category: web
   version: "0.1"

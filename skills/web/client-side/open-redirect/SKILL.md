@@ -9,7 +9,7 @@ description: >
   unicode homographs, null bytes, protocol-relative URLs, data:/javascript: schemes,
   fragment confusion, and DNS rebinding tricks.
 license: Apache-2.0
-compatibility: Designed for Claude Code. Tools: Burp Suite, ffuf.
+compatibility: "Designed for Claude Code. Tools: Burp Suite, ffuf."
 metadata:
   category: web
   version: "0.1"
